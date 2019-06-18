@@ -1,0 +1,41 @@
+/**
+*	Стили страницы
+**/
+
+/**    
+*	Colors    
+*
+*	Main: #252525;
+**/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.container {
+	min-width: 320px;
+	max-width: 100%;
+	background-color: #252525;
+}
+
+.wrap {
+	min-width: 320px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
