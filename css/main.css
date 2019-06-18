@@ -3,9 +3,21 @@
 **/
 
 /**    
-*	Colors    
+*	Colors:
 *
 *	Main: #252525;
+*	second: #e5493a;
+*	nav color: #707070;
+*	
+**/
+
+/**
+*	Fonts:
+*
+* font-family: 'Roboto', sans-serif;
+*
+* font-family: 'Raleway', sans-serif;
+*
 **/
 
 
@@ -23,6 +35,7 @@ html {
 
 body {
 	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 400;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -37,5 +50,117 @@ body {
 	min-width: 320px;
 	max-width: 1200px;
 	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
+
+/*    Header styles    */
+
+.header {
+	border-bottom: 4px solid #e5493a;
+}
+
+.header__wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+
+.header__logo {
+	margin-right: 20px;
+}
+
+
+/*    Nav styles    */
+
+.nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.header__nav {
+	margin: 0;
+	padding: 0;
+}
+
+.nav__item {
+	margin-right: 35px;
+}
+
+.nav__item:last-child {
+	margin-right: 0;
+}
+
+.nav__link {
+	display: inline-block;
+	font-size: 1.4rem;
+	font-family: 'Raleway', sans-serif;
+	color: #707070;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 1.429;
+}
+
+.nav__link:hover {
+	color: #e5493a;
+	transition-duration: 500ms;
+	transition-property: color;
+}
+
+.nav__link::before {
+	content: '';
+	display: block;
+	width: 8px;
+	height: 2px;
+	margin-bottom: 10px;
+	background-color: #e5493a;
+	opacity: 0;
+	-webkit-transition-duration: 500ms;
+	-o-transition-duration: 500ms;
+	transition-duration: 500ms;
+	transition-property: opacity;
+}
+
+.nav__link:hover::before {
+	opacity: 1;
+}
+
+@media ( max-width: 768px ) {
+	.header__wrap {
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	.header__logo {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.nav__item {
+		margin-right: 20px;
+	}
+}
