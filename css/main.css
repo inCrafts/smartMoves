@@ -9,6 +9,9 @@
 *	second: #e5493a;
 *	nav color: #707070;
 *	text color: #555555;
+*	corcle bg: #363636;
+*	icon bg: #636363;
+*	adv text : #555555;
 *	
 **/
 
@@ -54,6 +57,19 @@ body {
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
 }
 
 
@@ -301,7 +317,7 @@ body {
 	}
 
 	.banner___little {
-		font-size: 20px;
+		font-size: 20.5px;
 	}
 
 		.banner__text {
@@ -319,4 +335,114 @@ body {
 		margin-left: 0;
 	}
 }
+
+/*    Стили Преимуществ    */
+
+.advantages__list {
+	list-style: none;
+	display: grid;
+	padding-top: 65px;
+	padding-bottom: 50px;
+	grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+	grid-column-gap: 30px;
+}
+
+.advantages__item {
+	margin: 15px 0;
+}
+
+.advantages__item:hover {
+	cursor: pointer;
+}
+
+.advantages__item:hover .advantages__img {
+	border-color: #e5493a;
+	transition-duration: 500ms;
+	transition-property: border-color; 
+}
+
+.advantages__item:hover .advantages__svg {
+	fill: #e5493a;
+	transition-duration: 500ms;
+	transition-property: fill; 
+}
+
+.advantages__item:hover .advantages___subtitle {
+	color: #e5493a;
+	transition-duration: 500ms;
+	transition-property: color; 
+}
+
+.advantages__item:hover .advantages___text {
+	color: #ffffff;
+	transition-duration: 500ms;
+	transition-property: color; 
+}
+
+.advantages__img {
+	border: 1px solid #363636;
+	border-radius: 50%;
+	position: relative;
+	width: 104px;
+	height: 104px;
+}
+
+.advantages__svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 40px;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	fill: #636363;
+}
+
+.advantages___subtitle {
+	margin: 20px 0;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+	color: #636363;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 1.111;
+}
+
+.advantages___text {
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	color: #555555;
+	line-height: 1.429;
+	margin: 20px 0;
+}
+
+.advantages___text::after {
+	content: '';
+	display: block;
+	width: 70px;
+	height: 2px;
+	margin-top: 25px;
+	background-color: #e5493a;
+}
+
+
+
+/*    Media    */
+
+@media ( max-width: 480px ) {
+	.advantages__list {
+		padding-top: 30px;
+		padding-bottom: 25px;
+	}
+
+	.advantages__item {
+		text-align: center;
+	}
+
+	.advantages__img {
+		margin: 0 auto;
+	}
+}
+
 
