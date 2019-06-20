@@ -11,9 +11,10 @@
 *	text color: #555555;
 *	corcle bg: #363636;
 *	icon bg: #636363;
-*	adv text : #555555;
-*	works bg : #202020;
-*	works desc : #959595;
+*	adv text: #555555;
+*	works bg: #202020;
+*	works desc: #959595;
+*	green btn: #8dc63f;
 *	
 **/
 
@@ -716,5 +717,131 @@ body {
 	}
 	.works__name {
 		grid-column: span 1;
+	}
+}
+
+
+/*    Стили Responsive    */
+
+.responsive__wrap {
+	padding: 100px 0;
+	background: url('../img/bg-two.png') left bottom no-repeat;
+}
+
+.responsive__info {
+	max-width: 360px;
+	margin-left: auto;
+}
+
+.responsive__title {
+	position: relative;
+	margin: 25px 0;
+	font-size: 3rem;
+	font-family: 'Raleway', sans-serif;
+	color: #ffffff;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.1;
+}
+
+.responsive__title::before {
+	position: absolute;
+	top: -25px;
+	left: 0;
+	content: '';
+	background-color: #2f2f2f;
+	width: 70px;
+	height: 2px;
+}
+
+
+.responsive__text {
+	margin: 20px 0;
+	font-size: 1.4rem;
+	color: #464646;
+	line-height: 1.429;
+}
+.responsive-list {
+	list-style: none;
+	padding: 0;
+}
+
+.responsive-list__item:first-child {
+	margin-top: 0;
+}
+.responsive-list__item:first-child {
+	margin-top: 0;
+}
+
+.responsive-list__item {
+	position: relative;
+	padding-left: 55px;
+	margin-top: 20px;
+	font-size: 1.4rem;
+	color: #959595;
+	line-height: 1.286;
+}
+
+.responsive-list__item::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 25px;
+	display: block;
+	width: 8px;
+	height: 2px;
+	background: #e5493a;
+	transform: translateY(-50%);
+}
+
+.responsive__btn {
+	display: block;
+	width: 170px;
+	height: 54px;
+	margin-top: 60px;
+	border: none;
+	border-radius: 5px;
+	background-color: #8dc63f;
+  	font-family: 'Raleway', sans-serif;
+	font-size: 1.4rem;
+  	font-weight: 800;
+}
+
+
+.Buy_This_Now {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 5.714;
+  text-align: center;
+  position: absolute;
+  left: 1214.938px;
+  top: 2620.002px;
+  z-index: 230;
+}
+
+/*    Responsive Media    */
+
+@media (max-width: 768px) {
+	.responsive__wrap {
+		background-image: none;
+	}
+
+	.responsive__info {
+		margin-left: 0;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.responsive__wrap {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.responsive__info {
+		margin-left: 0;
+		max-width: 100%;
 	}
 }
