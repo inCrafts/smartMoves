@@ -5,7 +5,7 @@
 /**    
 *	Colors:
 *
-*	Main: #252525;
+*	main: #252525;
 *	second: #e5493a;
 *	nav color: #707070;
 *	text color: #555555;
@@ -18,6 +18,8 @@
 *	green btn, contacts bg: #8dc63f;
 *	blog, clients line: #2f2f2f;
 *	blog desc: #959595;
+*	footer bg: #111111;
+*	footer txt: #646464;
 *	
 **/
 
@@ -173,7 +175,7 @@ body {
 
 @media ( max-width: 768px ) {
 
-	.header__wrap {
+	.header__wrap, .footer__nav {
 		flex-direction: column;
 		justify-content: flex-start;
 		padding-top: 25px;
@@ -1537,4 +1539,24 @@ input::placeholder, textarea::placeholder {
 	.contacts__title {
 		margin-bottom: 30px;
 	}
+}
+
+
+/*    Footer styles    */
+
+.footer {
+	background: #111111;
+}
+
+.footer__wrap {
+	padding: 30px 0;
+}
+
+.footer__nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
 }
